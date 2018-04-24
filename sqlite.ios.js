@@ -309,6 +309,7 @@ Database.prototype.execSQL = function(sql, params, callback) {
             }
             var result = sqlite3_step(statement);
             if (result && result !== 100 && result !== 101) {
+		    console.log("error in updation And inserrtion sqlite "+result);
                 callback("SQLITE.ExecSQL Failed " + res);
                 return;
             }
