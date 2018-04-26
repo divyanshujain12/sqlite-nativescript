@@ -245,7 +245,7 @@ Database.prototype.close = function(callback) {
 
         }
 
-        sqlite3_close(self._db);
+        sqlite3_close_v2(self._db);
         self._db = null;
         self._isOpen = false;
         if (callback) {
