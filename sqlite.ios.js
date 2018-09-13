@@ -608,7 +608,7 @@ Database.prototype._bind = function(statement, params) {
             if (params[i] == null) { // jshint ignore:line
                 res = sqlite3_bind_null(statement, i+1);
             } else {
-                param = params[i].toString(‘utf8’);
+                param = params[i].toString('utf8');
                 res = sqlite3_bind_text(statement, i+1, param, -1, null );
             }
             if (res) {
@@ -620,7 +620,7 @@ Database.prototype._bind = function(statement, params) {
         if (params == null) { // jshint ignore:line
             res = sqlite3_bind_null(statement, 1);
         } else {
-            param = params.toString(‘utf8’);
+            param = params.toString('utf8');
             res = sqlite3_bind_text(statement, 1, param, -1, null );
         }
         if (res) {
